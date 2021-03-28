@@ -1,0 +1,11 @@
+name = "workers-graphql-example-external-api"
+# account_id = "YOUR-ACCOUNT-ID"
+type = "javascript"
+workers_dev = true
+
+[build]
+command = "yarn build"
+# The "modules" upload format is required for all projects that implement a Durable Object namespace.
+upload_format = "modules"
+# Make sure we don't upload the sourcemap as part of the bundle
+upload_exclude = ["*.map"]

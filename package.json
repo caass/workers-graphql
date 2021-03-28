@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "workspaces": [
+    "workers-graphql",
+    "examples/*"
+  ],
+  "scripts": {
+    "rebuild": "yarn workspace workers-graphql run build && yarn install --force"
+  }
+}
