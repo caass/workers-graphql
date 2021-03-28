@@ -1,5 +1,5 @@
 {
-  "name": "@examples/basic",
+  "name": "@examples/barebones",
   "private": true,
   "version": "0.1.0",
   "module": "dist/worker.mjs",
