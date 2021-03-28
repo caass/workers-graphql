@@ -26,9 +26,9 @@ type HandlerCreationArgs = {
 /**
  * Create a handler function to parase graphql queries.
  *
- * @param args.schema The GraphQL Schema to run your query against
- * @param args.root a root value which gets passed to the GraphQL executor
- * @param args.context a context value which gets passed to the GraphQL executor, or a function that runs on each request and returns a context value. This is useful for injecting different contexts depending on the request.
+ * @param schema The GraphQL Schema to run your query against
+ * @param root a root value which gets passed to the GraphQL executor
+ * @param context a context which gets passed to the GraphQL executor, or a function that runs on each request and returns a context. This is useful for injecting different contexts depending on the request.
  * @returns a request handler that parses and responds to GraphQL queries
  */
 export const createGraphqlHandler = ({
