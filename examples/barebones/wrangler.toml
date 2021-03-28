@@ -1,4 +1,4 @@
-name = "workers-graphql-example-external-api"
+name = "workers-graphql-barebones"
 # account_id = "YOUR-ACCOUNT-ID"
 type = "javascript"
 workers_dev = true

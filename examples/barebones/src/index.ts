@@ -1,20 +1,6 @@
 import { createGraphqlHandler, createPlaygroundHandler } from "workers-graphql";
-import { buildSchema } from "graphql";
-
-var schema = buildSchema(`
-  type Query {
-    hello: String
-  }
-`);
-
-// Note! we're not creating resolvers or buildExecutableSchema or anything, this is literally just a
-// function at the root of the query. Terrible! But, it works for this very simple example.
-var root = { hello: () => "Hello world!" };
-
-const options = {
-  playgroundEndpoint: "/playground",
-  graphqlEndpoint: "/graphql",
-};
+import { schema, root } from "./graphql";
+import * as options from "./options";
 
 const playgroundHandler = createPlaygroundHandler({
   endpoint: options.graphqlEndpoint,
