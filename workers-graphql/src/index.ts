@@ -1,2 +1,1 @@
-export { createPlaygroundHandler } from "./playground";
-export { createGraphqlHandler } from "./graphql";
+export { createPlaygroundHandler, createGraphqlHandler } from "./handlers";

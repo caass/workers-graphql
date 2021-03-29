@@ -12,9 +12,18 @@ yarn workspace @examples/barebones run start # or whatever example
 
 Roadmap:
 
-- [x] GraphQL & playground handlers
-- [ ] Durable Objects-based subscription handler
-- [x] Basic example
-- [ ] Example using KV
-- [ ] Example using an external API
-- [ ] Example using Durable Objects & subscriptions
+- [ ] Basic functionality
+  - [x] GraphQL & playground handlers
+  - [ ] Durable Objects-based subscription handler
+- [ ] Shims for popular libraries
+  - [ ] [TypeGraphQL](https://github.com/MichalLytek/type-graphql)
+  - [ ] [Apollo Server](https://github.com/apollographql/apollo-server)
+- [ ] Working examples
+  - [ ] Barebones
+    - [x] Basic example
+    - [ ] Example using KV
+    - [ ] Example using an external API
+    - [ ] Example using Durable Objects & subscriptions
+  - [ ] Using popular libraries
+    - [ ] TypeGraphQL
+    - [ ] Apollo Server

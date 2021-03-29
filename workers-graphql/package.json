@@ -15,6 +15,7 @@
     "graphql": "^15.0.0"
   },
   "dependencies": {
-    "graphql-playground-html": "^1.6.29"
+    "graphql-playground-html": "^1.6.29",
+    "type-graphql": "^1.1.1"
   }
 }
