@@ -1,3 +1,5 @@
+/* DO NOT USE...highly WIP, not working, haven't touched in months */
+
 /*
  * `type-graphql` is really cool, but has a bunch of node dependencies, mostly
  * for stuff like "get all the schema from a file glob". These shims sidestep

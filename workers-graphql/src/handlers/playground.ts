@@ -11,7 +11,7 @@ import { get, RequestHandler, ValueOrInjector } from "./util";
  * @returns a request handler that serves the rendered playground HTML
  */
 export const createPlaygroundHandler = (
-  options: ValueOrInjector<RenderPageOptions>
+  options?: ValueOrInjector<RenderPageOptions>
 ): RequestHandler => {
   const getOptions = get(options);
 

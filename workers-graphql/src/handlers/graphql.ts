@@ -7,6 +7,7 @@ import {
   GraphQLFieldResolver,
   GraphQLTypeResolver,
 } from "graphql";
+
 import {
   ExecutionResultResponse,
   get,
@@ -15,16 +16,34 @@ import {
   ValueOrInjector,
 } from "./util";
 
+/**
+ * A lot of this stuff is ripped almost or completely directly
+ * from the graphql reference library, which performs the actual
+ * execution.
+ */
 type HandlerCreationArgs = {
   schema: GraphQLSchema;
+
+  /**
+   * [See this](https://graphql.org/learn/execution/#root-fields-resolvers) for uhh
+   * more information
+   */
   root?: Record<string, (args: any) => any>;
+
+  /**
+   * So, for my use-case I never used any context, but I would imagine it's pretty
+   * common to have some other middleware that provides some context.
+   * So anyway, you can provide a static value as context, or provide a function
+   * (an injector) that'll generate context from a request. Look at the typedefs
+   * for `ValueOrInjector` for more info.
+   */
   context?: ValueOrInjector<Record<string, any>>;
   fieldResolver?: GraphQLFieldResolver<any, any>;
   typeResolver?: GraphQLTypeResolver<any, any>;
 };
 
 /**
- * Create a handler function to parase graphql queries.
+ * Create a handler function to parse graphql queries.
  *
  * @param schema The GraphQL Schema to run your query against
  * @param root a root value which gets passed to the GraphQL executor
